@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "967595633023",
+    "project_id": "contact-form-21618",
+    "storage_bucket": "contact-form-21618.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967595633023:android:a0adf10c06e498b416124a",
+        "android_client_info": {
+          "package_name": "com.vishnu.contact_form"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967595633023-norb3kqejlmp84aqvffhottt4kst4mai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuknZLXDXsiVpD3f41DuGF2rK74ddXuZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967595633023-norb3kqejlmp84aqvffhottt4kst4mai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
