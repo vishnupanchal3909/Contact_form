@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        installSplashsScreen();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         UserTotalFees=findViewById(R.id.userTotalFees);
         //save , Delete;
         save=findViewById(R.id.saveBtn);
-        Delete=findViewById(R.id.Delete);
+        Delete=findViewById(R.id.Show);
 
         //For RealTime Database
         databaseReference= FirebaseDatabase.getInstance().getReference("UserInformation");
