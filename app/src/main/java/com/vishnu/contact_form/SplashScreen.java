@@ -18,10 +18,33 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        startanimation();
+    }
+
+    private void startanimation() {
         image=findViewById(R.id.imageView);
         top= AnimationUtils.loadAnimation(this,R.anim.topapproach);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         image.setAnimation(top);
+
+//        top.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+//                startActivity(intent);
+//                SplashScreen.this.finish();
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//
+//            }
+//        });
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
