@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Contact_form">
         <activity
             android:name=".SplashScreen"
+            android:theme="@style/Theme.App.SplashScreen"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

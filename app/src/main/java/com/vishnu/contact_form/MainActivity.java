@@ -1,14 +1,19 @@
 package com.vishnu.contact_form;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
+import androidx.core.splashscreen.SplashScreenViewProvider;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.TextureView;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
@@ -34,12 +39,21 @@ public class MainActivity extends AppCompatActivity {
     TextInputEditText Username,UserAddress,UserRegistrtionFees,UserExamFess,UserMailID,UserCollegeFees,UserTotalFees;
     ///For realtime Database
     DatabaseReference databaseReference;
+    // screen ready or not
+    boolean isandroidReady=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        installSplashsScreen();
+        ////Splash Screen Using API
+//        try {
+//            Thread.sleep(200);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        androidx.core.splashscreen.SplashScreen splashScreen=androidx.core.splashscreen.SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //For Date
         dateView = (TextView) findViewById(R.id.showdate);
@@ -119,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
     public void setDate(View view) {
         showDialog(999);

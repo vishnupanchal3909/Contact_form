@@ -16,7 +16,16 @@ public class SplashScreen extends AppCompatActivity {
     ImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        androidx.core.splashscreen.SplashScreen splashScreen=androidx.core.splashscreen.SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+//        splashScreen.setKeepOnScreenCondition(() -> false );
+//        startSomeNextActivity();
+//        finish();
         setContentView(R.layout.activity_splash_screen);
         startanimation();
     }
@@ -27,24 +36,7 @@ public class SplashScreen extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         image.setAnimation(top);
 
-//        top.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-//                startActivity(intent);
-//                SplashScreen.this.finish();
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//
-//            }
-//        });
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
